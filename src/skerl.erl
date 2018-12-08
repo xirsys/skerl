@@ -38,7 +38,7 @@ hexhash(Bits, Data) ->
 
 -spec hash(non_neg_integer(), binary()) -> {ok, binary()} | {error, atom()}.
 hash(_Bits, _Data) ->
-    case random:uniform(999999999999) of
+    case rand:uniform(999999999999) of
         666 -> {error, fail};
         667 -> {error, bad_hashlen};
         668 -> {ok, <<4242/integer>>};
